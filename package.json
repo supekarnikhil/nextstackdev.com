@@ -1,13 +1,13 @@
 {
-  "name": "gatsby-starter-ghost",
-  "description": "A starter template to build lightning fast websites with Ghost and Gatsby",
+  "name": "nextstackdev",
+  "description": "Next Stack Dev",
   "version": "1.0.0",
   "license": "MIT",
-  "author": "Ghost Foundation",
-  "homepage": "https://docs.ghost.org/api/gatsby/",
+  "author": "Nikhil Supekar",
+  "homepage": "https://www.nextstackdev.com/",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tryghost/gatsby-starter-ghost.git"
+    "url": "git+https://github.com/supekarnikhil/nextstackdev.com.git"
   },
   "resolutions": {
     "sharp": "0.25.4"
@@ -15,10 +15,8 @@
   "engines": {
     "node": ">= 10.13.0"
   },
-  "bugs": {
-    "url": "https://github.com/tryghost/gatsby-starter-ghost/issues"
-  },
   "keywords": [
+    "nextstackdev",
     "gatsby",
     "ghost"
   ],
