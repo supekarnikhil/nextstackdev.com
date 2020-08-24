@@ -19,7 +19,7 @@ const generateItem = function generateItem(siteUrl, post) {
     let imageUrl
 
     if (post.feature_image) {
-        imageUrl = post.feature_image
+        imageUrl = post.feature_image.replace('http://localhost:2368/content/images/', '/images/')
 
         // Add a media content tag
         item.custom_elements.push({
