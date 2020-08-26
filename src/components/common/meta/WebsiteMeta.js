@@ -11,7 +11,8 @@ import config from '../../../utils/siteConfig'
 const WebsiteMeta = ({ data, settings, canonical, title, description, image, type }) => {
     settings = settings.allGhostSettings.edges[0].node
 
-    const publisherLogo = url.resolve(config.siteUrl, (settings.logo || config.siteIcon))
+    let  publisherLogo = url.resolve(config.siteUrl, (settings.logo || config.siteIcon))
+    publisherLogo = publisherLogo.replace('http://localhost:2368/content/images/', config.siteUrl+'/images/')
     let shareImage = image || data.feature_image || _.get(settings, `cover_image`, null)
 
     shareImage = shareImage ? url.resolve(config.siteUrl, shareImage) : null
