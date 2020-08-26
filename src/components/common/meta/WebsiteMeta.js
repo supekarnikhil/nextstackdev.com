@@ -15,7 +15,7 @@ const WebsiteMeta = ({ data, settings, canonical, title, description, image, typ
     let shareImage = image || data.feature_image || _.get(settings, `cover_image`, null)
 
     shareImage = shareImage ? url.resolve(config.siteUrl, shareImage) : null
-
+    shareImage = shareImage.replace('http://localhost:2368/content/images/', config.siteUrl+'/images/')
     description = description || data.meta_description || data.description || config.siteDescriptionMeta || settings.description
     title = `${title || data.meta_title || data.name || data.title} - ${settings.title}`
 

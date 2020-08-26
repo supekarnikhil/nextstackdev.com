@@ -12,7 +12,8 @@ const AuthorMeta = ({ data, settings, canonical }) => {
     settings = settings.allGhostSettings.edges[0].node
 
     const author = getAuthorProperties(data)
-    const shareImage = author.image || _.get(settings, `cover_image`, null)
+    let shareImage = author.image || _.get(settings, `cover_image`, null)
+    shareImage = shareImage.replace('http://localhost:2368/content/images/', config.siteUrl+'/images/')
     const title = `${data.name} - ${settings.title}`
     const description = data.bio || config.siteDescriptionMeta || settings.description
 
